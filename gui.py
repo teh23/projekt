@@ -14,7 +14,7 @@ from PyQt5.QtCore import QThread, pyqtSignal
 import time
 import requests
 
-
+from PyQt5.QtWidgets import QMessageBox
 
 class MainWindow(object):
     def setupUi(self, MainWindow):
@@ -277,6 +277,8 @@ class QuizWid(object):
                 self.translate(self.idQuestions[0], self.jsonFromRequest)
             else:
                 print(self.correct)
+                #info = QMessageBox(self, 'Wynik:', str(self.correct))
+                #info.exec_()
 
 
     def checkCorrectAnswer(self, answer, id):
@@ -302,6 +304,4 @@ class QuizWid(object):
         self.radioButtonC.setText(json[number-1]['c'])
         self.radioButtonD.setText(json[number-1]['d'])
         self.labelPytanie.setText(json[number-1]['pytanie'])
-
-
 

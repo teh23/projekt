@@ -10,8 +10,9 @@ def events():
     print(event_data)
     database = _mysql.connect("localhost", "root", db='projekt')
     database.set_character_set('utf8')
+    print (event_data['poprawna'])
 
-    database.query("""INSERT INTO `quiz` (`pytanie`, `a`, `b`, `c`, `d`, `poprawna`) VALUES(%s, %s, %s, %s, %s, %s);"""
+    database.query("""INSERT INTO `quiz` (`pytanie`, `a`, `b`, `c`, `d`, `poprawna`) VALUES('%s', '%s', '%s', '%s', '%s', '%s');"""
                                                             % (event_data['pytanie'],
                                                              event_data['a'], event_data['b'],
                                                              event_data['c'], event_data['d'],
