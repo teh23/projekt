@@ -142,7 +142,7 @@ class MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("Quziowanie", "Quiz"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Dodawanie"))
         self.buttonDodaj.setText(_translate("MainWindow", "Dodaj"))
         self.label_4.setText(_translate("MainWindow", "B"))
